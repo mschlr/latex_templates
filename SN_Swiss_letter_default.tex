@@ -1,0 +1,61 @@
+\documentclass[fontsize=12pt, paper=a4]{scrlttr2}
+% SN - Standard Dokumentklasse für schweizerische Briefe
+%
+% Alternativen für andere Brieffensterformate: 
+% DIN, SNleft, C5 
+%
+\LoadLetterOption{SN}
+\KOMAoptions{
+	foldmarks=true,
+	% foldmarks=blmtP % Faltmarke ohne Lochermarkierungen
+	frommobilephone=true,
+	fromemail=true,
+}
+
+% Schrift + Encoding für 'pdftex'
+\usepackage{marvosym}
+\usepackage{mathptmx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Spracheinstellungen
+\usepackage[ngerman]{babel}
+
+% Entferne Paragraph Einzug
+\setlength\parindent{0pt}
+
+% Variablen für Brief
+\setkomavar{date}{\today{}} % Datum
+\setkomavar{place}{Zürich} % Ort
+
+\setkomavar{fromname}{Martin Schuler} % Absendername
+\setkomavar{fromaddress}{Paradeplatz 91\\8000 Zürich} % Absenderadresse
+\setkomavar{fromemail}[\Letter{} ]{foo@bar.org}
+\setkomavar{frommobilephone}[\Mobilefone{} ]{079 123 45 67}
+
+
+\setkomavar{subject}{Antike Blumenvase} % Betreff
+\setkomavar{signature}{Martin Schuler} % Signatur
+
+\begin{document}
+\begin{letter} {
+				%-- Anschrift ---------------+
+					Trivial Insurance AG\\
+					Bergstrasse 12 \\
+					Postfach \\
+					1234 Dorf 
+				%----------------------------+
+				}
+
+\opening{Sehr geehrte Damen und Herren,}
+
+	Hiermit sende ich Ihnen schriftlich die Unterlagen für die bereits getätigte Schadensmeldung, anbei finden sie alle benötigen Unterlagen. Bei Fragen oder Rückmeldungen stehe ich Ihnen zur Verfügung.
+
+\closing{Mit freundlichen Grüssen}
+
+\hfill
+
+\encl{Kopie des Kostenvorschlags\\Fotos vom 1.~Dezember}
+
+\end{letter}
+\end{document}
